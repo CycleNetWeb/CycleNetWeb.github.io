@@ -49,7 +49,7 @@
         <table align=center width=1000px>
             <tr>
                 <td width=260px>
-                        <img class="round" src="./assets/teaser.png" style="width:900px"/>
+                        <img class="round" src="./assets/teaser.png" style="width: 1000px;"/>
                 </td>
             </tr>
         </table>
@@ -267,14 +267,27 @@
 
     
     <center>
-    <h1>Comparison</h1>
+    <h1>Ablation Study</h1>
         <table align=center width=1100px>
             <tr>
                 <td width=260px>
-                        <img class="round" src="./assets/comparison.png" style="width: 1000px;"/>
+                        <img class="round" src="./assets/ablation/ablation.png" style="width: 1000px;"/>
                 </td>
             </tr>
         </table>
+    <p>
+        Recall that FastCycleNet removes the cycle consistency loss from CycleNet. We further
+    remove the invariance loss to understand the role of each loss term. Table 2 shows our
+    ablation study on winter→summer task with FID, CLIP score, and LPIPS. When both losses are
+    removed, the model can be considered as a fine-tuned LDM backbone (row 4), which produces a
+    high CLIP similarity score of 24.35. This confirms that the pre-trained LDM backbone can already
+    make qualitative translations, while the LPIPS score of 0.61 implies a poor consistency from the
+    original images. When we introduced the consistency constraint (row 3), the model's LPIPS score
+    improves significantly with a drop of the CLIP score to 19.89. This suggests a trade-off between cycle
+    consistency and translation quality. When we introduced the invariance constraint (row 2), the model
+    achieves the best translation quality with satisfying consistency. By introducing both constraints (row
+    1), CycleNet ensures a better consistency at a slight cost of translation quality.
+    </p>
     </center>
 
     

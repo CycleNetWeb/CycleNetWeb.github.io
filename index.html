@@ -28,10 +28,8 @@
         <table align=center width=250px>
             <tr>
                 <td align=center width=120px>
-                    <center>
                         <span style="font-size:24px; margin-left: 0px;"><a href='https://github.com/sled-group/CycleNet'>[Code]</a></span>
                         <span style="font-size:24px; margin-left: 0px;"><a href='https://github.com/sled-group/CycleNet'>[Paper]</a></span>
-                    </center>
                 </td>
             </tr>
         </table>
@@ -51,13 +49,10 @@
         <table align=center width=1000px>
             <tr>
                 <td width=260px>
-                    <center>
                         <img class="round" src="./assets/teaser.png" style="width:900px"/>
-                    </center>
                 </td>
             </tr>
         </table>
-    </center>
     
     <p> 
         <!-- Diffusion models (DMs) have enabled breakthroughs in image synthesis tasks but
@@ -86,9 +81,9 @@
         <br>
         <!-- <span style="font-weight: 800;">TL;DR:</span> <span style=" color: #941120;"> no finetuning</span>  required; <span style=" color: #941120;"> no text input</span> needed; input <span style=" color: #941120;"> structure preserved</span>.  -->
     </p>
+    </center>
 
-    <hr>
-    <center><h1>Abstract</h1></center>
+    <center><h1>Abstract</h1>
     <p> 
         Diffusion models (DMs) have enabled breakthroughs in image synthesis tasks but lack an intuitive interface for consistent image-to-image (I2I) translation. 
         Various methods have been explored to address this issue, including mask-based methods, attention-based methods, and image-conditioning. 
@@ -100,224 +95,206 @@
         CycleNet is a practical framework, which is robust even with very limited training data (around 2k) and requires minimal computational resources (1 GPU) to train.
         Our code and data will be made available to the community upon acceptance. 
     </p>
-    <hr>
+    </center>
     
-    <br>
-    <h1>Method</h1>
     <center>
+    <h1>Method</h1>
         <table align=center width=1000px>
             <tr>
                 <td width=260px>
-                    <center>
                         <img class="round" src="./assets/cycle.png" style="width:450px"/>
                         <img class="round" src="./assets/network.png" style="width:450px"/>
-                    </center>
                 </td>
             </tr>
         </table>
-    </center>
     <p>
         The image translation cycle includes a forward translation from \(x_0\) to \(\overline{y}_0\) and a backward translation to \(\overline{x}_0\). 
         The key idea of our method is to ensure that when conditioned on an image \(c_{\mathrm{img}}\) that falls into the target domain specified by \(c_{\mathrm{text}}\), the LDM should reproduce this image condition through the reverse process. The dashed lines indicate the regularization in the loss functions.
         <br>
     </p>
+</center>
 
-    <br>
-    <hr>
+<center>
 
     <h1>Results</h1>
 
-    <center>
-        <h2>Summer2Winter</h2>
+        <h3>Summer2Winter</h3>
         <table align=center width=1100px>
             <tr>
                 <div class="d-flex justify-content-center">
                     <div class="flip-card-container"> <div class="flip-card"> <div class="flip-card-inner">
-                          <div class="flip-card-front"> <img src="assets/summer2winter/summer_1.png" style="width:320px"> </div>
-                          <div class="flip-card-back"> <img src="assets/summer2winter/winter_1a.png" style="width:320px"> </div>
+                          <div class="flip-card-front"> <img src="assets/summer2winter/summer_1.png" style="width:300px"> </div>
+                          <div class="flip-card-back"> <img src="assets/summer2winter/winter_1a.png" style="width:300px"> </div>
                     </div> </div> </div>
                     <div class="flip-card-container"> <div class="flip-card" style="margin-left: 60px;"> <div class="flip-card-inner">
-                        <div class="flip-card-front"> <img src="assets/summer2winter/summer_2.png" style="width:320px"> </div>
-                        <div class="flip-card-back"> <img src="assets/summer2winter/winter_2a.png" style="width:320px"> </div>
+                        <div class="flip-card-front"> <img src="assets/summer2winter/summer_2.png" style="width:300px"> </div>
+                        <div class="flip-card-back"> <img src="assets/summer2winter/winter_2a.png" style="width:300px"> </div>
                     </div> </div> </div>
                     <div class="flip-card-container"> <div class="flip-card" style="margin-left: 60px;"> <div class="flip-card-inner">
-                        <div class="flip-card-front"> <img src="assets/summer2winter/summer_3.png" style="width:320px"> </div>
-                        <div class="flip-card-back"> <img src="assets/summer2winter/winter_3a.png" style="width:320px"> </div>
+                        <div class="flip-card-front"> <img src="assets/summer2winter/summer_3.png" style="width:300px"> </div>
+                        <div class="flip-card-back"> <img src="assets/summer2winter/winter_3a.png" style="width:300px"> </div>
                     </div> </div> </div>
                   </div><br>
             </tr>
             <tr>
                 <div class="d-flex justify-content-center">
                     <div class="flip-card-container"> <div class="flip-card"> <div class="flip-card-inner">
-                          <div class="flip-card-front"> <img src="assets/summer2winter/summer_1.png" style="width:320px"> </div>
-                          <div class="flip-card-back"> <img src="assets/summer2winter/winter_1b.png" style="width:320px"> </div>
+                          <div class="flip-card-front"> <img src="assets/summer2winter/summer_1.png" style="width:300px"> </div>
+                          <div class="flip-card-back"> <img src="assets/summer2winter/winter_1b.png" style="width:300px"> </div>
                     </div> </div> </div>
                     <div class="flip-card-container"> <div class="flip-card" style="margin-left: 60px;"> <div class="flip-card-inner">
-                        <div class="flip-card-front"> <img src="assets/summer2winter/summer_2.png" style="width:320px"> </div>
-                        <div class="flip-card-back"> <img src="assets/summer2winter/winter_2b.png" style="width:320px"> </div>
+                        <div class="flip-card-front"> <img src="assets/summer2winter/summer_2.png" style="width:300px"> </div>
+                        <div class="flip-card-back"> <img src="assets/summer2winter/winter_2b.png" style="width:300px"> </div>
                     </div> </div> </div>
                     <div class="flip-card-container"> <div class="flip-card" style="margin-left: 60px;"> <div class="flip-card-inner">
-                        <div class="flip-card-front"> <img src="assets/summer2winter/summer_3.png" style="width:320px"> </div>
-                        <div class="flip-card-back"> <img src="assets/summer2winter/winter_3b.png" style="width:320px"> </div>
+                        <div class="flip-card-front"> <img src="assets/summer2winter/summer_3.png" style="width:300px"> </div>
+                        <div class="flip-card-back"> <img src="assets/summer2winter/winter_3b.png" style="width:300px"> </div>
+                    </div> </div> </div>
+                  </div>
+            </tr>
+        </table>
+        <p style=" color: #6D6E71;">[The first row shows results of CycleNet, and the second row shows results of Fast CycleNet.]</p>
+        <h3>Apple2Orange</h3>
+        <table align=center width=1100px>
+            <tr>
+                <div class="d-flex justify-content-center">
+                    <div class="flip-card-container"> <div class="flip-card"> <div class="flip-card-inner">
+                          <div class="flip-card-front"> <img src="assets/apple2orange/apple_1.png" style="width:300px"> </div>
+                          <div class="flip-card-back"> <img src="assets/apple2orange/orange_1a.png" style="width:300px"> </div>
+                    </div> </div> </div>
+                    <div class="flip-card-container"> <div class="flip-card" style="margin-left: 60px;"> <div class="flip-card-inner">
+                        <div class="flip-card-front"> <img src="assets/apple2orange/apple_2.png" style="width:300px"> </div>
+                        <div class="flip-card-back"> <img src="assets/apple2orange/orange_2a.png" style="width:300px"> </div>
+                    </div> </div> </div>
+                    <div class="flip-card-container"> <div class="flip-card" style="margin-left: 60px;"> <div class="flip-card-inner">
+                        <div class="flip-card-front"> <img src="assets/apple2orange/apple_3.png" style="width:300px"> </div>
+                        <div class="flip-card-back"> <img src="assets/apple2orange/orange_3a.png" style="width:300px"> </div>
+                    </div> </div> </div>
+                  </div><br>
+            </tr>
+            <tr>
+                <div class="d-flex justify-content-center">
+                    <div class="flip-card-container"> <div class="flip-card"> <div class="flip-card-inner">
+                          <div class="flip-card-front"> <img src="assets/apple2orange/apple_1.png" style="width:300px"> </div>
+                          <div class="flip-card-back"> <img src="assets/apple2orange/orange_1b.png" style="width:300px"> </div>
+                    </div> </div> </div>
+                    <div class="flip-card-container"> <div class="flip-card" style="margin-left: 60px;"> <div class="flip-card-inner">
+                        <div class="flip-card-front"> <img src="assets/apple2orange/apple_2.png" style="width:300px"> </div>
+                        <div class="flip-card-back"> <img src="assets/apple2orange/orange_2b.png" style="width:300px"> </div>
+                    </div> </div> </div>
+                    <div class="flip-card-container"> <div class="flip-card" style="margin-left: 60px;"> <div class="flip-card-inner">
+                        <div class="flip-card-front"> <img src="assets/apple2orange/apple_3.png" style="width:300px"> </div>
+                        <div class="flip-card-back"> <img src="assets/apple2orange/orange_3b.png" style="width:300px"> </div>
                     </div> </div> </div>
                   </div>
             </tr>
         </table>
         <p style=" color: #6D6E71;">[The first row shows results of CycleNet, and the second row shows results of Fast CycleNet.]</p>
         <br>
-        <h2>Apple2Orange</h2>
+        <h3>Horse2Zebra</h3>
         <table align=center width=1100px>
             <tr>
                 <div class="d-flex justify-content-center">
                     <div class="flip-card-container"> <div class="flip-card"> <div class="flip-card-inner">
-                          <div class="flip-card-front"> <img src="assets/apple2orange/apple_1.png" style="width:320px"> </div>
-                          <div class="flip-card-back"> <img src="assets/apple2orange/orange_1a.png" style="width:320px"> </div>
+                          <div class="flip-card-front"> <img src="assets/horse2zebra/horse1.png" style="width:300px"> </div>
+                          <div class="flip-card-back"> <img src="assets/horse2zebra/zebra1a.png" style="width:300px"> </div>
                     </div> </div> </div>
                     <div class="flip-card-container"> <div class="flip-card" style="margin-left: 60px;"> <div class="flip-card-inner">
-                        <div class="flip-card-front"> <img src="assets/apple2orange/apple_2.png" style="width:320px"> </div>
-                        <div class="flip-card-back"> <img src="assets/apple2orange/orange_2a.png" style="width:320px"> </div>
+                        <div class="flip-card-front"> <img src="assets/horse2zebra/horse2.png" style="width:300px"> </div>
+                        <div class="flip-card-back"> <img src="assets/horse2zebra/zebra2a.png" style="width:300px"> </div>
                     </div> </div> </div>
                     <div class="flip-card-container"> <div class="flip-card" style="margin-left: 60px;"> <div class="flip-card-inner">
-                        <div class="flip-card-front"> <img src="assets/apple2orange/apple_3.png" style="width:320px"> </div>
-                        <div class="flip-card-back"> <img src="assets/apple2orange/orange_3a.png" style="width:320px"> </div>
+                        <div class="flip-card-front"> <img src="assets/horse2zebra/horse3.png" style="width:300px"> </div>
+                        <div class="flip-card-back"> <img src="assets/horse2zebra/zebra3a.png" style="width:300px"> </div>
                     </div> </div> </div>
                   </div><br>
             </tr>
             <tr>
                 <div class="d-flex justify-content-center">
                     <div class="flip-card-container"> <div class="flip-card"> <div class="flip-card-inner">
-                          <div class="flip-card-front"> <img src="assets/apple2orange/apple_1.png" style="width:320px"> </div>
-                          <div class="flip-card-back"> <img src="assets/apple2orange/orange_1b.png" style="width:320px"> </div>
+                          <div class="flip-card-front"> <img src="assets/horse2zebra/horse1.png" style="width:300px"> </div>
+                          <div class="flip-card-back"> <img src="assets/horse2zebra/zebra1b.png" style="width:300px"> </div>
                     </div> </div> </div>
                     <div class="flip-card-container"> <div class="flip-card" style="margin-left: 60px;"> <div class="flip-card-inner">
-                        <div class="flip-card-front"> <img src="assets/apple2orange/apple_2.png" style="width:320px"> </div>
-                        <div class="flip-card-back"> <img src="assets/apple2orange/orange_2b.png" style="width:320px"> </div>
+                        <div class="flip-card-front"> <img src="assets/horse2zebra/horse2.png" style="width:300px"> </div>
+                        <div class="flip-card-back"> <img src="assets/horse2zebra/zebra2b.png" style="width:300px"> </div>
                     </div> </div> </div>
                     <div class="flip-card-container"> <div class="flip-card" style="margin-left: 60px;"> <div class="flip-card-inner">
-                        <div class="flip-card-front"> <img src="assets/apple2orange/apple_3.png" style="width:320px"> </div>
-                        <div class="flip-card-back"> <img src="assets/apple2orange/orange_3b.png" style="width:320px"> </div>
+                        <div class="flip-card-front"> <img src="assets/horse2zebra/horse3.png" style="width:300px"> </div>
+                        <div class="flip-card-back"> <img src="assets/horse2zebra/zebra3b.png" style="width:300px"> </div>
                     </div> </div> </div>
                   </div>
             </tr>
         </table>
         <p style=" color: #6D6E71;">[The first row shows results of CycleNet, and the second row shows results of Fast CycleNet.]</p>
         <br>
-        <h2>Horse2Zebra</h2>
+        <h3>Manicups</h3>
         <table align=center width=1100px>
             <tr>
                 <div class="d-flex justify-content-center">
                     <div class="flip-card-container"> <div class="flip-card"> <div class="flip-card-inner">
-                          <div class="flip-card-front"> <img src="assets/horse2zebra/horse1.png" style="width:320px"> </div>
-                          <div class="flip-card-back"> <img src="assets/horse2zebra/zebra1a.png" style="width:320px"> </div>
+                          <div class="flip-card-front"> <img src="assets/Manicup_Empty/empty1.png" style="width:300px"> </div>
+                          <div class="flip-card-back"> <img src="assets/Manicup_Empty/empty1a.png" style="width:300px"> </div>
                     </div> </div> </div>
                     <div class="flip-card-container"> <div class="flip-card" style="margin-left: 60px;"> <div class="flip-card-inner">
-                        <div class="flip-card-front"> <img src="assets/horse2zebra/horse2.png" style="width:320px"> </div>
-                        <div class="flip-card-back"> <img src="assets/horse2zebra/zebra2a.png" style="width:320px"> </div>
+                        <div class="flip-card-front"> <img src="assets/Manicup_Empty/empty2.png" style="width:300px"> </div>
+                        <div class="flip-card-back"> <img src="assets/Manicup_Empty/empty2a.png" style="width:300px"> </div>
                     </div> </div> </div>
                     <div class="flip-card-container"> <div class="flip-card" style="margin-left: 60px;"> <div class="flip-card-inner">
-                        <div class="flip-card-front"> <img src="assets/horse2zebra/horse3.png" style="width:320px"> </div>
-                        <div class="flip-card-back"> <img src="assets/horse2zebra/zebra3a.png" style="width:320px"> </div>
+                        <div class="flip-card-front"> <img src="assets/Manicup_Empty/empty3.png" style="width:300px"> </div>
+                        <div class="flip-card-back"> <img src="assets/Manicup_Empty/empty3a.png" style="width:300px"> </div>
                     </div> </div> </div>
                   </div><br>
             </tr>
             <tr>
                 <div class="d-flex justify-content-center">
                     <div class="flip-card-container"> <div class="flip-card"> <div class="flip-card-inner">
-                          <div class="flip-card-front"> <img src="assets/horse2zebra/horse1.png" style="width:320px"> </div>
-                          <div class="flip-card-back"> <img src="assets/horse2zebra/zebra1b.png" style="width:320px"> </div>
+                          <div class="flip-card-front"> <img src="assets/Manicup_Fill/fill1.png" style="width:300px"> </div>
+                          <div class="flip-card-back"> <img src="assets/Manicup_Fill/fill1a.png" style="width:300px"> </div>
                     </div> </div> </div>
                     <div class="flip-card-container"> <div class="flip-card" style="margin-left: 60px;"> <div class="flip-card-inner">
-                        <div class="flip-card-front"> <img src="assets/horse2zebra/horse2.png" style="width:320px"> </div>
-                        <div class="flip-card-back"> <img src="assets/horse2zebra/zebra2b.png" style="width:320px"> </div>
+                        <div class="flip-card-front"> <img src="assets/Manicup_Fill/fill2.png" style="width:300px"> </div>
+                        <div class="flip-card-back"> <img src="assets/Manicup_Fill/fill2a.png" style="width:300px"> </div>
                     </div> </div> </div>
                     <div class="flip-card-container"> <div class="flip-card" style="margin-left: 60px;"> <div class="flip-card-inner">
-                        <div class="flip-card-front"> <img src="assets/horse2zebra/horse3.png" style="width:320px"> </div>
-                        <div class="flip-card-back"> <img src="assets/horse2zebra/zebra3b.png" style="width:320px"> </div>
-                    </div> </div> </div>
-                  </div>
-            </tr>
-        </table>
-        <p style=" color: #6D6E71;">[The first row shows results of CycleNet, and the second row shows results of Fast CycleNet.]</p>
-        <br>
-        <h2>Manicups</h2>
-        <table align=center width=1100px>
-            <tr>
-                <div class="d-flex justify-content-center">
-                    <div class="flip-card-container"> <div class="flip-card"> <div class="flip-card-inner">
-                          <div class="flip-card-front"> <img src="assets/Manicup_Empty/empty1.png" style="width:320px"> </div>
-                          <div class="flip-card-back"> <img src="assets/Manicup_Empty/empty1a.png" style="width:320px"> </div>
-                    </div> </div> </div>
-                    <div class="flip-card-container"> <div class="flip-card" style="margin-left: 60px;"> <div class="flip-card-inner">
-                        <div class="flip-card-front"> <img src="assets/Manicup_Empty/empty2.png" style="width:320px"> </div>
-                        <div class="flip-card-back"> <img src="assets/Manicup_Empty/empty2a.png" style="width:320px"> </div>
-                    </div> </div> </div>
-                    <div class="flip-card-container"> <div class="flip-card" style="margin-left: 60px;"> <div class="flip-card-inner">
-                        <div class="flip-card-front"> <img src="assets/Manicup_Empty/empty3.png" style="width:320px"> </div>
-                        <div class="flip-card-back"> <img src="assets/Manicup_Empty/empty3a.png" style="width:320px"> </div>
-                    </div> </div> </div>
-                  </div><br>
-            </tr>
-            <tr>
-                <div class="d-flex justify-content-center">
-                    <div class="flip-card-container"> <div class="flip-card"> <div class="flip-card-inner">
-                          <div class="flip-card-front"> <img src="assets/Manicup_Fill/fill1.png" style="width:320px"> </div>
-                          <div class="flip-card-back"> <img src="assets/Manicup_Fill/fill1a.png" style="width:320px"> </div>
-                    </div> </div> </div>
-                    <div class="flip-card-container"> <div class="flip-card" style="margin-left: 60px;"> <div class="flip-card-inner">
-                        <div class="flip-card-front"> <img src="assets/Manicup_Fill/fill2.png" style="width:320px"> </div>
-                        <div class="flip-card-back"> <img src="assets/Manicup_Fill/fill2a.png" style="width:320px"> </div>
-                    </div> </div> </div>
-                    <div class="flip-card-container"> <div class="flip-card" style="margin-left: 60px;"> <div class="flip-card-inner">
-                        <div class="flip-card-front"> <img src="assets/Manicup_Fill/fill3.png" style="width:320px"> </div>
-                        <div class="flip-card-back"> <img src="assets/Manicup_Fill/fill3a.png" style="width:320px"> </div>
+                        <div class="flip-card-front"> <img src="assets/Manicup_Fill/fill3.png" style="width:300px"> </div>
+                        <div class="flip-card-back"> <img src="assets/Manicup_Fill/fill3a.png" style="width:300px"> </div>
                     </div> </div> </div>
                   </div>
             </tr>
         </table>
     </center>
 
-    <br>
-
-    <hr>
     
+    <center>
     <h1>Comparison</h1>
-    <center>
         <table align=center width=1100px>
             <tr>
                 <td width=260px>
-                    <center>
-                        <img class="round" src="./assets/comparison.png" style="width:1100px"/>
-                    </center>
+                        <img class="round" src="./assets/comparison.png" style="width: 1000px;"/>
                 </td>
             </tr>
         </table>
     </center>
 
-    <hr>
     
+    <center>
     <h1>More results: high-resolution comparison </h1>
-    <center>
         <table align=center width=1100px>
             <tr>
                 <td width=260px>
-                    <center>
-                        <img class="round" src="./assets/highres.png" style="width:1100px"/>
-                    </center>
+                        <img class="round" src="./assets/highres.png" style="width: 1000px;"/>
                 </td>
             </tr>
         </table>
     </center>
-
-    <hr>
     
-    <h1>More results: zero-shot generalization </h1>
     <center>
+    <h1>More results: zero-shot generalization </h1>
         <table align=center width=1100px>
             <tr>
                 <td width=260px>
-                    <center>
-                        <img class="round" src="./assets/ood.png" style="width:1100px"/>
-                    </center>
+                        <img class="round" src="./assets/ood.png" style="width: 1000px;"/>
                 </td>
             </tr>
         </table>

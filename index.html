@@ -48,39 +48,42 @@
     <center>
         <table align=center width=1000px>
             <tr>
-                <td width=260px>
-                        <img class="round" src="./assets/teaser.png" style="width: 1000px;"/>
-                </td>
+                <div class="d-flex justify-content-center" style="width:1000px; height: 520px;">
+                    <div class="flip-card" style="width:1000px"> <div class="flip-card-inner" style="width:1000px">
+                        <div class="flip-card-front"> <img src="assets/highres/summer1.png" style="width:900px"> </div>
+                        <div class="flip-card-back"> <img src="assets/highres/winter1.png" style="width:900px"> </div>
+                    </div> </div>
+                </div>
             </tr>
         </table>
-    
-    <p> 
-        <!-- Diffusion models (DMs) have enabled breakthroughs in image synthesis tasks but
-        lack an intuitive interface for consistent image-to-image (I2I) translation. Various
-        methods have been explored to address this issue, including mask-based methods,
-        attention-based methods, and image-conditioning. However, it remains a critical
-        challenge to enable unpaired I2I translation with pre-trained DMs while maintaining
-        satisfying consistency. This paper introduces CycleNet, a novel but simple method
-        that incorporates cycle consistency into DMs to regularize image manipulation.
-        We validate CycleNet on unpaired I2I tasks of different granularities. Besides
-        the scene and object level translation, we additionally contribute a multi-domain
-        I2I translation dataset with object state changes. Our empirical studies show that
-        CycleNet is superior in translation consistency and quality, and can generate high-
-        quality images for out-of-domain distributions with a simple change of the textual
-        prompt. CycleNet is a practical framework, which is robust even with very limited
-        training data (around 2k) and requires minimal computational resources (1 GPU) to
-        train. Our code and data will be made available to the community upon acceptance  -->
-        This paper introduces CycleNet, a novel but simple method
-        that incorporates cycle consistency into DMs to regularize image manipulation.
-        We validate CycleNet on unpaired image-to-image tasks of different granularities. Besides
-        the scene and object level translation, we additionally contribute a multi-domain
-        I2I translation dataset with object state changes. Our empirical studies show that
-        CycleNet is superior in translation consistency and quality, and can generate high-
-        quality images for out-of-domain distributions with a simple change of the textual
-        prompt.
-        <br>
-        <!-- <span style="font-weight: 800;">TL;DR:</span> <span style=" color: #941120;"> no finetuning</span>  required; <span style=" color: #941120;"> no text input</span> needed; input <span style=" color: #941120;"> structure preserved</span>.  -->
-    </p>
+
+        <p>
+            <!-- Diffusion models (DMs) have enabled breakthroughs in image synthesis tasks but
+            lack an intuitive interface for consistent image-to-image (I2I) translation. Various
+            methods have been explored to address this issue, including mask-based methods,
+            attention-based methods, and image-conditioning. However, it remains a critical
+            challenge to enable unpaired I2I translation with pre-trained DMs while maintaining
+            satisfying consistency. This paper introduces CycleNet, a novel but simple method
+            that incorporates cycle consistency into DMs to regularize image manipulation.
+            We validate CycleNet on unpaired I2I tasks of different granularities. Besides
+            the scene and object level translation, we additionally contribute a multi-domain
+            I2I translation dataset with object state changes. Our empirical studies show that
+            CycleNet is superior in translation consistency and quality, and can generate high-
+            quality images for out-of-domain distributions with a simple change of the textual
+            prompt. CycleNet is a practical framework, which is robust even with very limited
+            training data (around 2k) and requires minimal computational resources (1 GPU) to
+            train. Our code and data will be made available to the community upon acceptance  -->
+            This paper introduces CycleNet, a novel but simple method
+            that incorporates cycle consistency into DMs to regularize image manipulation.
+            We validate CycleNet on unpaired image-to-image tasks of different granularities. Besides
+            the scene and object level translation, we additionally contribute a multi-domain
+            I2I translation dataset with object state changes. Our empirical studies show that
+            CycleNet is superior in translation consistency and quality, and can generate high-
+            quality images for out-of-domain distributions with a simple change of the textual
+            prompt.
+            <br>
+            <!-- <span style="font-weight: 800;">TL;DR:</span> <span style=" color: #941120;"> no finetuning</span>  required; <span style=" color: #941120;"> no text input</span> needed; input <span style=" color: #941120;"> structure preserved</span>.  -->
+        </p>
     </center>
 
     <center><h1>Abstract</h1>
@@ -101,10 +104,8 @@
     <h1>Method</h1>
         <table align=center width=1000px>
             <tr>
-                <td width=260px>
                         <img class="round" src="./assets/cycle.png" style="width:450px"/>
                         <img class="round" src="./assets/network.png" style="width:450px"/>
-                </td>
             </tr>
         </table>
     <p>
@@ -292,12 +293,21 @@
 
     
     <center>
-    <h1>More results: high-resolution comparison </h1>
+    <h1>More results: high-resolution results </h1>
         <table align=center width=1100px>
             <tr>
-                <td width=260px>
-                        <img class="round" src="./assets/highres.png" style="width: 1000px;"/>
-                </td>
+                <div class="d-flex justify-content-center" style="width:1000px; height: 520px;">
+                    <div class="flip-card" style="width:1000px"> <div class="flip-card-inner" style="width:1000px">
+                        <div class="flip-card-front"> <img src="assets/highres/winter2.png" style="width:900px;height: 500px;"> </div>
+                        <div class="flip-card-back"> <img src="assets/highres/summer2.png" style="width:900px;height: 500px;"> </div>
+                    </div> </div>
+                </div>
+                <div class="d-flex justify-content-center" style="width:1000px; height: 520px;">
+                    <div class="flip-card" style="width:1000px"> <div class="flip-card-inner" style="width:1000px">
+                        <div class="flip-card-front"> <img src="assets/highres/apple2.png" style="width:900px;height: 500px;"> </div>
+                        <div class="flip-card-back"> <img src="assets/highres/orange2.png" style="width:900px;height: 500px;"> </div>
+                    </div> </div>
+                </div>
             </tr>
         </table>
     </center>
@@ -312,6 +322,13 @@
             </tr>
         </table>
     </center>
+
+    <center>
+        <h1>References</h1>
+            <table align=center width=1100px>
+            </table>
+        </center>
+
     <script>
         // $(".flip-card").click(function() {
         //     console.log("flipping")

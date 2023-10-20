@@ -13,12 +13,9 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
     <link rel="stylesheet" href="styles/main.css">
-    <!-- <link rel="stylesheet" href="styles/image_card_flip.css"> -->
     <link rel="stylesheet" href="styles/image_card_fader.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-
-
     <link rel="stylesheet" href="styles/image_card_slider.css">
 </head>
 
@@ -33,26 +30,51 @@
             <table align=center width=250px>
                 <tr>
                     <td align=center width=120px>
+                        <span style="font-size:24px; margin-left: 0px;"><a href='https://neurips.cc/virtual/2023/poster/69913'>[NeurIPS 2023]</a></span>
+                        <span style="font-size:24px; margin-left: 0px;"><a href='https://arxiv.org/'>[Arxiv]</a></span>
                         <span style="font-size:24px; margin-left: 0px;"><a href='https://github.com/sled-group/CycleNet'>[Code]</a></span>
-                        <span style="font-size:24px; margin-left: 0px;"><a href='https://github.com/sled-group/CycleNet'>[Paper]</a></span>
+                        <span style="font-size:24px; margin-left: 0px;"><a href='https://huggingface.co/datasets/sled-umich/ManiCups'>[ManiCups Dataset]</a></span>
                     </td>
                 </tr>
             </table>
         </table>
-
-        <p><strong>Authors:</strong></p>
-        <p>Sihan Xu<sup>1</sup><a href="#fn1" id="ref1">*</a>, Ziqiao Ma<sup>1</sup><a href="#fn1" id="ref1">*</a>, Yidong Huang<sup>1</sup>, Honglak Lee<sup>1,2</sup>, Joyce Chai<sup>1</sup></p>
+        
+        <p>
+            <a href="https://sihanxu.github.io/">Sihan Xu</a><sup>1</sup><a href="#fn1" id="ref1">*</a>, 
+            <a href="http://ziqiaoma.com/">Ziqiao Ma</a><sup>1</sup><a href="#fn1" id="ref1">*</a>, 
+            <a href="https://h6kplus.github.io/owenhuang.github.io/">Yidong Huang</a><sup>1</sup>, 
+            <a href="https://web.eecs.umich.edu/~honglak/">Honglak Lee</a><sup>1,2</sup>, 
+            <a href="https://web.eecs.umich.edu/~chaijy/">Joyce Chai</a><sup>1</sup>
+        </p>
         <p><sup>1</sup>University of Michigan, <sup>2</sup>LG AI Research</p>
 
-        <p id="fn1">*Equal contribution. <a href="#ref1">↩</a></p>
+        <p id="fn1">* Equal contribution. <a href="#ref1"></a></p>
 
     </center>
 
     <br>
 
     <center>
+        <h1>Abstract</h1>
+        <p>
+            Diffusion models (DMs) have enabled breakthroughs in image synthesis tasks but lack an intuitive interface for consistent image-to-image (I2I) translation. 
+            Various methods have been explored to address this issue, including mask-based methods, attention-based methods, and image-conditioning. 
+            However, it remains a critical challenge to enable unpaired I2I translation with pre-trained DMs while maintaining satisfying consistency. 
+            This paper introduces Cyclenet, a novel but simple method that incorporates cycle consistency into DMs to regularize image manipulation. 
+            We validate Cyclenet on unpaired I2I tasks of different granularities. 
+            Besides the scene and object level translation, we additionally contribute a multi-domain I2I translation dataset to study the physical state changes of objects. 
+            Our empirical studies show that Cyclenet is superior in translation consistency and quality, 
+            and can generate high-quality images for out-of-domain distributions with a simple change of the textual prompt. 
+            Cyclenet is a practical framework, which is robust even with very limited training data (around 2k) and requires minimal computational resources (1 GPU) to train.
+        </p>
+    </center>
+
+    
+    <center>
+        <h1>Consistent Image Manipulation with CycleNet: High-resolution Examples </h1>
         <table align=center width=1000px>
             <tr>
+                <h3> Summer \(\rightarrow\) Winter </h3>
                 <div class="d-flex justify-content-center" style="width:1000px; height: 520px;">
                     <div class="flip-card" style="width:1000px">
                         <div class="flip-card-inner" style="width:1000px">
@@ -61,44 +83,32 @@
                         </div>
                     </div>
                 </div>
+
+                <h3> Winter \(\rightarrow\) Summer </h3>
+                <div class="d-flex justify-content-center" style="width:1000px; height: 520px;">
+                    <div class="flip-card" style="width:1000px">
+                        <div class="flip-card-inner" style="width:1000px">
+                            <div class="flip-card-front"> <img src="assets/highres/winter2.png" style="width:900px;height: 500px;"> </div>
+                            <div class="flip-card-back"> <img src="assets/highres/summer2.png" style="width:900px;height: 500px;"> </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3> Apple \(\rightarrow\) Orange </h3>
+                <div class="d-flex justify-content-center" style="width:1000px; height: 520px;">
+                    <div class="flip-card" style="width:1000px">
+                        <div class="flip-card-inner" style="width:1000px">
+                            <div class="flip-card-front"> <img src="assets/highres/apple2.png" style="width:900px;height: 500px;"> </div>
+                            <div class="flip-card-back"> <img src="assets/highres/orange2.png" style="width:900px;height: 500px;"> </div>
+                        </div>
+                    </div>
+                </div>
+                
             </tr>
         </table>
-
-        <p>
-            <!-- Diffusion models (DMs) have enabled breakthroughs in image synthesis tasks but
-            lack an intuitive interface for consistent image-to-image (I2I) translation. Various
-            methods have been explored to address this issue, including mask-based methods,
-            attention-based methods, and image-conditioning. However, it remains a critical
-            challenge to enable unpaired I2I translation with pre-trained DMs while maintaining
-            satisfying consistency. This paper introduces CycleNet, a novel but simple method
-            that incorporates cycle consistency into DMs to regularize image manipulation.
-            We validate CycleNet on unpaired I2I tasks of different granularities. Besides
-            the scene and object level translation, we additionally contribute a multi-domain
-            I2I translation dataset with object state changes. Our empirical studies show that
-            CycleNet is superior in translation consistency and quality, and can generate high-
-            quality images for out-of-domain distributions with a simple change of the textual
-            prompt. CycleNet is a practical framework, which is robust even with very limited
-            training data (around 2k) and requires minimal computational resources (1 GPU) to
-            train. Our code and data will be made available to the community upon acceptance  -->
-            This paper introduces CycleNet, a novel but simple method that incorporates cycle consistency into DMs to regularize image manipulation. We validate CycleNet on unpaired image-to-image tasks of different granularities. Besides the scene and object level
-            translation, we additionally contribute a multi-domain I2I translation dataset with object state changes. Our empirical studies show that CycleNet is superior in translation consistency and quality, and can generate high- quality images for
-            out-of-domain distributions with a simple change of the textual prompt.
-            <br>
-            <!-- <span style="font-weight: 800;">TL;DR:</span> <span style=" color: #941120;"> no finetuning</span>  required; <span style=" color: #941120;"> no text input</span> needed; input <span style=" color: #941120;"> structure preserved</span>.  -->
-        </p>
     </center>
 
-    <center>
-        <h1>Abstract</h1>
-        <p>
-            Diffusion models (DMs) have enabled breakthroughs in image synthesis tasks but lack an intuitive interface for consistent image-to-image (I2I) translation. Various methods have been explored to address this issue, including mask-based methods, attention-based
-            methods, and image-conditioning. However, it remains a critical challenge to enable unpaired I2I translation with pre-trained DMs while maintaining satisfying consistency. This paper introduces CycleNet, a novel but simple method that incorporates
-            cycle consistency into DMs to regularize image manipulation. We validate CycleNet on unpaired I2I tasks of different granularities. Besides the scene and object level translation, we additionally contribute a multi-domain I2I translation dataset
-            with object state changes. Our empirical studies show that CycleNet is superior in translation consistency and quality, and can generate high-quality images for out-of-domain distributions with a simple change of the textual prompt. CycleNet
-            is a practical framework, which is robust even with very limited training data (around 2k) and requires minimal computational resources (1 GPU) to train. Our code and data will be made available to the community upon acceptance.
-        </p>
-    </center>
-
+    
     <center>
         <h1>Method</h1>
         <table align=center width=1000px>
@@ -118,7 +128,7 @@
 
         <h1>Results</h1>
 
-        <h3>Summer2Winter</h3>
+        <h3>Summer \(\rightarrow\) Winter</h3>
         <table align=center width=1100px>
             <tr>
                 <div class="d-flex justify-content-center">
@@ -178,7 +188,8 @@
             </tr>
         </table>
         <p style=" color: #6D6E71;">[The first row shows results of CycleNet, and the second row shows results of Fast CycleNet.]</p>
-        <h3>Apple2Orange</h3>
+        
+        <h3>Apple \(\rightarrow\) Orange</h3>
         <table align=center width=1100px>
             <tr>
                 <div class="d-flex justify-content-center">
@@ -239,7 +250,8 @@
         </table>
         <p style=" color: #6D6E71;">[The first row shows results of CycleNet, and the second row shows results of Fast CycleNet.]</p>
         <br>
-        <h3>Horse2Zebra</h3>
+        
+        <h3>Horse \(\rightarrow\) Zebra</h3>
         <table align=center width=1100px>
             <tr>
                 <div class="d-flex justify-content-center">
@@ -300,6 +312,7 @@
         </table>
         <p style=" color: #6D6E71;">[The first row shows results of CycleNet, and the second row shows results of Fast CycleNet.]</p>
         <br>
+        
         <h3>Manicups</h3>
         <table align=center width=1100px>
             <tr>
@@ -374,35 +387,10 @@
         <p>
             Recall that FastCycleNet removes the cycle consistency loss from CycleNet. We further remove the invariance loss to understand the role of each loss term. Table 2 shows our ablation study on winter→summer task with FID, CLIP score, and LPIPS. When both
             losses are removed, the model can be considered as a fine-tuned LDM backbone (row 4), which produces a high CLIP similarity score of 24.35. This confirms that the pre-trained LDM backbone can already make qualitative translations, while the
-            LPIPS score of 0.61 implies a poor consistency from the original images. When we introduced the consistency constraint (row 3), the model's LPIPS score improves significantly with a drop of the CLIP score to 19.89. This suggests a trade-off
-            between cycle consistency and translation quality. When we introduced the invariance constraint (row 2), the model achieves the best translation quality with satisfying consistency. By introducing both constraints (row 1), CycleNet ensures
-            a better consistency at a slight cost of translation quality.
+            LPIPS score of 0.61 implies a poor consistency from the original images. When we introduced the consistency constraint (row 3), the model's LPIPS score improved significantly with a drop of the CLIP score to 19.89. This suggests a trade-off
+            between cycle consistency and translation quality. When we introduced the invariance constraint (row 2), the model achieved the best translation quality with satisfying consistency. By introducing both constraints (row 1), CycleNet ensures
+            better consistency at a slight cost of translation quality.
         </p>
-    </center>
-
-
-    <center>
-        <h1>More results: high-resolution results </h1>
-        <table align=center width=1100px>
-            <tr>
-                <div class="d-flex justify-content-center" style="width:1000px; height: 520px;">
-                    <div class="flip-card" style="width:1000px">
-                        <div class="flip-card-inner" style="width:1000px">
-                            <div class="flip-card-front"> <img src="assets/highres/winter2.png" style="width:900px;height: 500px;"> </div>
-                            <div class="flip-card-back"> <img src="assets/highres/summer2.png" style="width:900px;height: 500px;"> </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center" style="width:1000px; height: 520px;">
-                    <div class="flip-card" style="width:1000px">
-                        <div class="flip-card-inner" style="width:1000px">
-                            <div class="flip-card-front"> <img src="assets/highres/apple2.png" style="width:900px;height: 500px;"> </div>
-                            <div class="flip-card-back"> <img src="assets/highres/orange2.png" style="width:900px;height: 500px;"> </div>
-                        </div>
-                    </div>
-                </div>
-            </tr>
-        </table>
     </center>
 
     <center>

@@ -38,17 +38,19 @@
                 </tr>
             </table>
         </table>
-        
+
         <p>
-            <a href="https://sihanxu.github.io/">Sihan Xu</a><sup>1</sup><a href="#fn1" id="ref1">*</a>, 
-            <a href="http://ziqiaoma.com/">Ziqiao Ma</a><sup>1</sup><a href="#fn1" id="ref1">*</a>, 
-            <a href="https://h6kplus.github.io/owenhuang.github.io/">Yidong Huang</a><sup>1</sup>, 
-            <a href="https://web.eecs.umich.edu/~honglak/">Honglak Lee</a><sup>1,2</sup>, 
+            <a href="https://sihanxu.github.io/">Sihan Xu</a><sup>1</sup><a href="#fn1" id="ref1">*</a>,
+            <a href="http://ziqiaoma.com/">Ziqiao Ma</a><sup>1</sup><a href="#fn1" id="ref1">*</a>,
+            <a href="https://h6kplus.github.io/owenhuang.github.io/">Yidong Huang</a><sup>1</sup>,
+            <a href="https://web.eecs.umich.edu/~honglak/">Honglak Lee</a><sup>1,2</sup>,
             <a href="https://web.eecs.umich.edu/~chaijy/">Joyce Chai</a><sup>1</sup>
         </p>
         <p><sup>1</sup>University of Michigan, <sup>2</sup>LG AI Research</p>
 
-        <p id="fn1">* Equal contribution. <a href="#ref1"></a></p>
+        <p id="fn1">* Equal contribution.
+            <a href="#ref1"></a>
+        </p>
 
     </center>
 
@@ -57,19 +59,15 @@
     <center>
         <h1>Abstract</h1>
         <p>
-            Diffusion models (DMs) have enabled breakthroughs in image synthesis tasks but lack an intuitive interface for consistent image-to-image (I2I) translation. 
-            Various methods have been explored to address this issue, including mask-based methods, attention-based methods, and image-conditioning. 
-            However, it remains a critical challenge to enable unpaired I2I translation with pre-trained DMs while maintaining satisfying consistency. 
-            This paper introduces Cyclenet, a novel but simple method that incorporates cycle consistency into DMs to regularize image manipulation. 
-            We validate Cyclenet on unpaired I2I tasks of different granularities. 
-            Besides the scene and object level translation, we additionally contribute a multi-domain I2I translation dataset to study the physical state changes of objects. 
-            Our empirical studies show that Cyclenet is superior in translation consistency and quality, 
-            and can generate high-quality images for out-of-domain distributions with a simple change of the textual prompt. 
-            Cyclenet is a practical framework, which is robust even with very limited training data (around 2k) and requires minimal computational resources (1 GPU) to train.
+            Diffusion models (DMs) have enabled breakthroughs in image synthesis tasks but lack an intuitive interface for consistent image-to-image (I2I) translation. Various methods have been explored to address this issue, including mask-based methods, attention-based
+            methods, and image-conditioning. However, it remains a critical challenge to enable unpaired I2I translation with pre-trained DMs while maintaining satisfying consistency. This paper introduces Cyclenet, a novel but simple method that incorporates
+            cycle consistency into DMs to regularize image manipulation. We validate Cyclenet on unpaired I2I tasks of different granularities. Besides the scene and object level translation, we additionally contribute a multi-domain I2I translation dataset
+            to study the physical state changes of objects. Our empirical studies show that Cyclenet is superior in translation consistency and quality, and can generate high-quality images for out-of-domain distributions with a simple change of the textual
+            prompt. Cyclenet is a practical framework, which is robust even with very limited training data (around 2k) and requires minimal computational resources (1 GPU) to train.
         </p>
     </center>
 
-    
+
     <center>
         <h1>Explore Consistent Image Manipulation with CycleNet</h1>
         <table align=center width=1000px>
@@ -103,12 +101,12 @@
                         </div>
                     </div>
                 </div>
-                
+
             </tr>
         </table>
     </center>
 
-    
+
     <center>
         <h1>Method</h1>
         <table align=center width=1000px>
@@ -188,7 +186,7 @@
             </tr>
         </table>
         <p style=" color: #6D6E71;">[The first row shows results of CycleNet, and the second row shows results of Fast CycleNet.]</p>
-        
+
         <h3>Apple \(\rightarrow\) Orange</h3>
         <table align=center width=1100px>
             <tr>
@@ -250,7 +248,7 @@
         </table>
         <p style=" color: #6D6E71;">[The first row shows results of CycleNet, and the second row shows results of Fast CycleNet.]</p>
         <br>
-        
+
         <h3>Horse \(\rightarrow\) Zebra</h3>
         <table align=center width=1100px>
             <tr>
@@ -312,32 +310,77 @@
         </table>
         <p style=" color: #6D6E71;">[The first row shows results of CycleNet, and the second row shows results of Fast CycleNet.]</p>
         <br>
-        
+
         <h3>Manicups</h3>
         <table align=center width=1100px>
             <tr>
                 <div class="d-flex justify-content-center">
                     <div class="flip-card-container">
                         <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front"> <img src="assets/Manicup_Empty/empty1.png" style="width:300px"> </div>
-                                <div class="flip-card-back"> <img src="assets/Manicup_Empty/empty1a.png" style="width:300px"> </div>
+                            <div class="flip-card-inner-small">
+                                <div class="flip-card-front"> <img src="assets/manicup/empty1.png" style="width:200px"> </div>
+                                <div class="flip-card-back"> <img src="assets/manicup/coffee1.png" style="width:200px"> </div>
                             </div>
                         </div>
                     </div>
                     <div class="flip-card-container">
-                        <div class="flip-card" style="margin-left: 60px;">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front"> <img src="assets/Manicup_Empty/empty2.png" style="width:300px"> </div>
-                                <div class="flip-card-back"> <img src="assets/Manicup_Empty/empty2a.png" style="width:300px"> </div>
+                        <div class="flip-card" style="margin-left: 40px;">
+                            <div class="flip-card-inner-small">
+                                <div class="flip-card-front"> <img src="assets/manicup/empty1.png" style="width:200px"> </div>
+                                <div class="flip-card-back"> <img src="assets/manicup/juice1.png" style="width:200px"> </div>
                             </div>
                         </div>
                     </div>
                     <div class="flip-card-container">
-                        <div class="flip-card" style="margin-left: 60px;">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front"> <img src="assets/Manicup_Empty/empty3.png" style="width:300px"> </div>
-                                <div class="flip-card-back"> <img src="assets/Manicup_Empty/empty3a.png" style="width:300px"> </div>
+                        <div class="flip-card" style="margin-left: 40px;">
+                            <div class="flip-card-inner-small">
+                                <div class="flip-card-front"> <img src="assets/manicup/empty1.png" style="width:200px"> </div>
+                                <div class="flip-card-back"> <img src="assets/manicup/milk1.png" style="width:200px"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card-container">
+                        <div class="flip-card" style="margin-left: 40px;">
+                            <div class="flip-card-inner-small">
+                                <div class="flip-card-front"> <img src="assets/manicup/empty1.png" style="width:200px"> </div>
+                                <div class="flip-card-back"> <img src="assets/manicup/water1.png" style="width:200px"> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+            </tr>
+
+            <tr>
+                <div class="d-flex justify-content-center">
+                    <div class="flip-card-container">
+                        <div class="flip-card">
+                            <div class="flip-card-inner-small">
+                                <div class="flip-card-front"> <img src="assets/manicup/empty2.png" style="width:200px"> </div>
+                                <div class="flip-card-back"> <img src="assets/manicup/coffee2.png" style="width:200px"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card-container">
+                        <div class="flip-card" style="margin-left: 40px;">
+                            <div class="flip-card-inner-small">
+                                <div class="flip-card-front"> <img src="assets/manicup/empty2.png" style="width:200px"> </div>
+                                <div class="flip-card-back"> <img src="assets/manicup/juice2.png" style="width:200px"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card-container">
+                        <div class="flip-card" style="margin-left: 40px;">
+                            <div class="flip-card-inner-small">
+                                <div class="flip-card-front"> <img src="assets/manicup/empty2.png" style="width:200px"> </div>
+                                <div class="flip-card-back"> <img src="assets/manicup/milk2.png" style="width:200px"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card-container">
+                        <div class="flip-card" style="margin-left: 40px;">
+                            <div class="flip-card-inner-small">
+                                <div class="flip-card-front"> <img src="assets/manicup/empty2.png" style="width:200px"> </div>
+                                <div class="flip-card-back"> <img src="assets/manicup/water2.png" style="width:200px"> </div>
                             </div>
                         </div>
                     </div>
@@ -347,29 +390,73 @@
                 <div class="d-flex justify-content-center">
                     <div class="flip-card-container">
                         <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front"> <img src="assets/Manicup_Fill/fill1.png" style="width:300px"> </div>
-                                <div class="flip-card-back"> <img src="assets/Manicup_Fill/fill1a.png" style="width:300px"> </div>
+                            <div class="flip-card-inner-small">
+                                <div class="flip-card-front"> <img src="assets/manicup/empty3.png" style="width:200px"> </div>
+                                <div class="flip-card-back"> <img src="assets/manicup/coffee3.png" style="width:200px"> </div>
                             </div>
                         </div>
                     </div>
                     <div class="flip-card-container">
-                        <div class="flip-card" style="margin-left: 60px;">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front"> <img src="assets/Manicup_Fill/fill2.png" style="width:300px"> </div>
-                                <div class="flip-card-back"> <img src="assets/Manicup_Fill/fill2a.png" style="width:300px"> </div>
+                        <div class="flip-card" style="margin-left: 40px;">
+                            <div class="flip-card-inner-small">
+                                <div class="flip-card-front"> <img src="assets/manicup/empty3.png" style="width:200px"> </div>
+                                <div class="flip-card-back"> <img src="assets/manicup/juice3.png" style="width:200px"> </div>
                             </div>
                         </div>
                     </div>
                     <div class="flip-card-container">
-                        <div class="flip-card" style="margin-left: 60px;">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front"> <img src="assets/Manicup_Fill/fill3.png" style="width:300px"> </div>
-                                <div class="flip-card-back"> <img src="assets/Manicup_Fill/fill3a.png" style="width:300px"> </div>
+                        <div class="flip-card" style="margin-left: 40px;">
+                            <div class="flip-card-inner-small">
+                                <div class="flip-card-front"> <img src="assets/manicup/empty3.png" style="width:200px"> </div>
+                                <div class="flip-card-back"> <img src="assets/manicup/milk3.png" style="width:200px"> </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div class="flip-card-container">
+                        <div class="flip-card" style="margin-left: 40px;">
+                            <div class="flip-card-inner-small">
+                                <div class="flip-card-front"> <img src="assets/manicup/empty3.png" style="width:200px"> </div>
+                                <div class="flip-card-back"> <img src="assets/manicup/water3.png" style="width:200px"> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+            </tr>
+            <tr>
+                <div class="d-flex justify-content-center">
+                    <div class="flip-card-container">
+                        <div class="flip-card">
+                            <div class="flip-card-inner-small">
+                                <div class="flip-card-front"> <img src="assets/manicup/empty4.png" style="width:200px"> </div>
+                                <div class="flip-card-back"> <img src="assets/manicup/coffee4.png" style="width:200px"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card-container">
+                        <div class="flip-card" style="margin-left: 40px;">
+                            <div class="flip-card-inner-small">
+                                <div class="flip-card-front"> <img src="assets/manicup/empty4.png" style="width:200px"> </div>
+                                <div class="flip-card-back"> <img src="assets/manicup/juice4.png" style="width:200px"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card-container">
+                        <div class="flip-card" style="margin-left: 40px;">
+                            <div class="flip-card-inner-small">
+                                <div class="flip-card-front"> <img src="assets/manicup/empty4.png" style="width:200px"> </div>
+                                <div class="flip-card-back"> <img src="assets/manicup/milk4.png" style="width:200px"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card-container">
+                        <div class="flip-card" style="margin-left: 40px;">
+                            <div class="flip-card-inner-small">
+                                <div class="flip-card-front"> <img src="assets/manicup/empty4.png" style="width:200px"> </div>
+                                <div class="flip-card-back"> <img src="assets/manicup/water4.png" style="width:200px"> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
             </tr>
         </table>
     </center>
@@ -407,7 +494,7 @@
     <center>
         <h1>Citation</h1>
         <pre>
-            <code align="left">
+            <code>
                 @inproceedings{xu2023cyclenet,
                     title = "CycleNet: Rethinking Cycle Consistent in Text‑Guided Diffusion for Image Manipulation",
                     author = "Xu, Sihan and Ma, Ziqiao and Huang, Yidong and Lee, Honglak and Chai, Joyce",

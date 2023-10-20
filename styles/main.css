@@ -532,3 +532,8 @@ center {
     border-radius: 15px;
     font-family: 'Noto Sans', sans-serif;
 }
+
+pre {
+    text-align: left;
+    /* Align text to the left */
+}

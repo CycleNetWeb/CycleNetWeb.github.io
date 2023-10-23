@@ -31,7 +31,7 @@
                 <tr>
                     <td align=center width=120px>
                         <span style="font-size:28px; margin-left: 0px;"><a href='https://neurips.cc/virtual/2023/poster/69913'>[NeurIPS 2023]</a></span><br>
-                        <span style="font-size:18px; margin-left: 0px;"><a href='https://arxiv.org/'>[Arxiv]</a></span>
+                        <span style="font-size:18px; margin-left: 0px;"><a href='https://arxiv.org/abs/2310.13165'>[Arxiv]</a></span>
                         <span style="font-size:18px; margin-left: 0px;"><a href='https://github.com/sled-group/CycleNet'>[Code]</a></span>
                         <span style="font-size:18px; margin-left: 0px;"><a href='https://huggingface.co/datasets/sled-umich/ManiCups'>[Data]</a></span>
                     </td>
@@ -124,9 +124,10 @@
 
     <center>
 
-        <h1>Results</h1>
+        <h1>Qualitative Results</h1>
 
         <h3>Summer \(\rightarrow\) Winter</h3>
+        <p style=" color: #6D6E71;">[The first row shows results of CycleNet, and the second row shows results of Fast CycleNet.]</p>
         <table align=center width=1100px>
             <tr>
                 <div class="d-flex justify-content-center">
@@ -185,9 +186,9 @@
                 </div>
             </tr>
         </table>
-        <p style=" color: #6D6E71;">[The first row shows results of CycleNet, and the second row shows results of Fast CycleNet.]</p>
 
         <h3>Apple \(\rightarrow\) Orange</h3>
+        <p style=" color: #6D6E71;">[The first row shows results of CycleNet, and the second row shows results of Fast CycleNet.]</p>
         <table align=center width=1100px>
             <tr>
                 <div class="d-flex justify-content-center">
@@ -246,10 +247,9 @@
                 </div>
             </tr>
         </table>
-        <p style=" color: #6D6E71;">[The first row shows results of CycleNet, and the second row shows results of Fast CycleNet.]</p>
-        <br>
 
         <h3>Horse \(\rightarrow\) Zebra</h3>
+        <p style=" color: #6D6E71;">[The first row shows results of CycleNet, and the second row shows results of Fast CycleNet.]</p>
         <table align=center width=1100px>
             <tr>
                 <div class="d-flex justify-content-center">
@@ -308,10 +308,9 @@
                 </div>
             </tr>
         </table>
-        <p style=" color: #6D6E71;">[The first row shows results of CycleNet, and the second row shows results of Fast CycleNet.]</p>
-        <br>
 
         <h3>Manicups</h3>
+        <p style=" color: #6D6E71;">[From left to right, we edit the images of empty cups to cups of coffee, juice, milk, and water.]</p>
         <table align=center width=1100px>
             <tr>
                 <div class="d-flex justify-content-center">
@@ -472,11 +471,14 @@
             </tr>
         </table>
         <p>
-            Recall that FastCycleNet removes the cycle consistency loss from CycleNet. We further remove the invariance loss to understand the role of each loss term. Table 2 shows our ablation study on winter→summer task with FID, CLIP score, and LPIPS. When both
-            losses are removed, the model can be considered as a fine-tuned LDM backbone (row 4), which produces a high CLIP similarity score of 24.35. This confirms that the pre-trained LDM backbone can already make qualitative translations, while the
-            LPIPS score of 0.61 implies a poor consistency from the original images. When we introduced the consistency constraint (row 3), the model's LPIPS score improved significantly with a drop of the CLIP score to 19.89. This suggests a trade-off
-            between cycle consistency and translation quality. When we introduced the invariance constraint (row 2), the model achieved the best translation quality with satisfying consistency. By introducing both constraints (row 1), CycleNet ensures
-            better consistency at a slight cost of translation quality.
+            We show our ablation study on winter→summer tasks with FID, CLIP score, and LPIPS. 
+            When both losses are removed, the model can be considered as a fine-tuned LDM backbone (row 4), which produces a high CLIP similarity score of 24.35. 
+            This confirms that the pre-trained LDM backbone can already make qualitative translations, 
+            while the LPIPS score of 0.61 implies a poor consistency from the original images. 
+            When we introduced the consistency constraint (row 3), the model's LPIPS score improved significantly with a drop of the CLIP score to 19.89. 
+            This suggests a trade-off between cycle consistency and translation quality. 
+            When we introduced the invariance constraint (row 2), the model achieved the best translation quality with satisfying consistency. 
+            By introducing both constraints (row 1), CycleNet ensures better consistency at a slight cost of translation quality.
         </p>
     </center>
 

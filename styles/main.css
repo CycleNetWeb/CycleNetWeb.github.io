@@ -64,6 +64,18 @@ img.rounded {
     -webkit-border-radius: 10px;
 }
 
+.alg {
+    width: 800px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /* Add a 50px margin from the top */
+    display: block;
+    /* To ensure margin works as expected */
+    margin-left: auto;
+    /* Center the image horizontally */
+    margin-right: auto;
+}
+
 a:link {
     color: #941120;
     text-decoration: none;
